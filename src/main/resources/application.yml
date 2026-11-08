@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ordering-system
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ordering_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+payment:
+  gateway:
+    endpoint-url: ${PAYMENT_GATEWAY_URL:https://api.mockpayment.com/v1/charge}
+    api-key: ${PAYMENT_GATEWAY_API_KEY:mock-api-key}
