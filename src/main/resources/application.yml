@@ -1,6 +1,8 @@
 server:
   port: 8080
-  forward-headers-strategy: framework
+  forward-headers-strategy: 
+  tomcat:
+    redirect-context-root: false
 
 spring:
   application:
