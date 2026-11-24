@@ -1,6 +1,6 @@
 server:
   port: 8080
-  forward-headers-strategy: 
+  forward-headers-strategy: native
   tomcat:
     redirect-context-root: false
 
